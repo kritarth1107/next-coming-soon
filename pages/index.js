@@ -5,11 +5,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="bg-black h-screen w-full justify-center items-center flex relative">
+    <main className="bg-black bg-image px-10 h-screen w-full justify-center items-center flex relative">
       {/* <img src="/assets/bh_white.png" className="absolute opacity-20" /> */}
-      <span className="pb-4 gradient-text text-9xl font-bold text-center tracking-[-10px]">
-        Coming Soon
-      </span>
+      <div className="flex flex-col">
+        <span className="pb-4 gradient-text text-8xl font-bold text-center tracking-[-7px]">
+          Get Ready for a Spectacular Arrival!
+        </span>
+        <div className="flex flex-row items-center justify-center"></div>
+      </div>
     </main>
   );
 }
