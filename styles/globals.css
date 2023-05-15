@@ -71,3 +71,13 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/* @media screen and (max-width: 768px) {
+  .bg-image {
+    background: url("../public/assets/bg-grad.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+   */
