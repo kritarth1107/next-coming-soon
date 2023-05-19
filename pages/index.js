@@ -90,7 +90,7 @@ export default function Home() {
                 <input
                   type="email"
                   name="email"
-                  className="h-full bg-transparent px-6 flex-1 focus:outline-none"
+                  className="h-full text-white bg-transparent px-6 flex-1 focus:outline-none"
                   placeholder="Email Address"
                 />
                 <button
