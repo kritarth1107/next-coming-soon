@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,9 +17,12 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  font-family: 'Barlow', sans-serif;
+  /* font-family: "Barlow", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Inter', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -28,8 +32,85 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.inter{
+  font-family: 'Inter', sans-serif;
+}
+
+.air-container {
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .air-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1512px) {
+  .air-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.bg-coming-soon{
+  background: url("../public/assets/coming-soon.png");
+  background-repeat: no-repeat;
+  background-size: 500%;
+  background-position: 0%;
+  animation: scrolling 15s linear infinite;
+}
+@keyframes scrolling {
+  0% { background-position: -30%; }
+  100% { background-position: 125%; }
+}
+/* 
 .gradient-text {
-  background: linear-gradient(to right,#151540,#313197,#313197, #1585be,#1585be,#1585be,#313197, #313197, #151540);
+  background: linear-gradient(
+    to right,
+    #313197,
+    #313197,
+    #4747d7,
+    #1585be,
+    #1585be,
+    #1585be,
+    #4747d7,
+    #313197,
+    #313197
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.continue-grad-button {
+  color: white;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+  background: linear-gradient(to right, #313197, #1585be, #313197);
+  background-size: 200% auto;
+}
+
+.continue-grad-button:hover {
+  transition: all ease-in-out 0.3s;
+  background: linear-gradient(to right, #313197, #1585be, #313197);
+  background-size: 100% auto;
+}
+
+.gradient-gray {
+  background: linear-gradient(
+    to right,
+    #585858,
+    #959595,
+    #cbcbcb,
+    #d8d8d8,
+    #e8e8e8,
+    #d8d8d8,
+    #cbcbcb,
+    #959595,
+    #585858
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -47,37 +128,85 @@ body {
 
 @-webkit-keyframes shimmer {
   0% {
-      background-position: -100% 0;
+    background-position: -100% 0;
   }
 
   100% {
-      background-position: 100% 0;
+    background-position: 100% 0;
   }
 }
 
 @keyframes shimmer {
   0% {
-      background-position: -1200px 0;
+    background-position: -1200px 0;
   }
 
   100% {
-      background-position: 1200px 0;
+    background-position: 1200px 0;
   }
 }
 
 .bg-image {
+  background-color: #030304;
   background: url("../public/assets/bg-grad.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-/* @media screen and (max-width: 768px) {
-  .bg-image {
-    background: url("../public/assets/bg-grad.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.glass {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(100px);
+  border-radius: 10px;
 }
-   */
+
+.input-border-gradient {
+  background: radial-gradient(
+        circle at 100% 100%,
+        #030304 0,
+        #030304 7px,
+        transparent 7px
+      )
+      0% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 0 100%, #030304 0, #030304 7px, transparent 7px)
+      100% 0%/8px 8px no-repeat,
+    radial-gradient(circle at 100% 0, #030304 0, #030304 7px, transparent 7px)
+      0% 100%/8px 8px no-repeat,
+    radial-gradient(circle at 0 0, #030304 0, #030304 7px, transparent 7px) 100%
+      100%/8px 8px no-repeat,
+    linear-gradient(#030304, #030304) 50% 50% / calc(100% - 2px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#030304, #030304) 50% 50% / calc(100% - 16px)
+      calc(100% - 2px) no-repeat,
+    radial-gradient(at 72% 37%, #1585be 32%, #313197 100%) 38% 94%/196% 171%;
+  border-radius: 8px;
+  padding: 9px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .input-border-gradient {
+    background: radial-gradient(
+          circle at 100% 100%,
+          #030304 0,
+          #030304 6px,
+          transparent 6px
+        )
+        0% 0%/8px 8px no-repeat,
+      radial-gradient(circle at 0 100%, #030304 0, #030304 6px, transparent 6px)
+        100% 0%/8px 8px no-repeat,
+      radial-gradient(circle at 100% 0, #030304 0, #030304 6px, transparent 6px)
+        0% 100%/8px 8px no-repeat,
+      radial-gradient(circle at 0 0, #030304 0, #030304 6px, transparent 6px)
+        100% 100%/8px 8px no-repeat,
+      linear-gradient(#030304, #030304) 50% 50% / calc(100% - 4px)
+        calc(100% - 16px) no-repeat,
+      linear-gradient(#030304, #030304) 50% 50% / calc(100% - 16px)
+        calc(100% - 4px) no-repeat,
+      radial-gradient(at 72% 37%, #1585be 32%, #313197 100%) 38% 94%/196% 171%;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+} */
